@@ -1,2 +1,16 @@
 # _DOCKER
-Docker stuff
+
+## Ouroboros
+* Keep docker images updated
+* https://github.com/pyouroboros/ouroboros
+* https://hub.docker.com/r/pyouroboros/ouroboros
+
+## Dozzle
+* Log viewer for docker containers
+* https://dozzle.dev/
+* https://github.com/amir20/dozzle
+* https://hub.docker.com/r/amir20/dozzle/
+
+## qBittorrent
+* Web Client 
+* https://hub.docker.com/r/linuxserver/qbittorrent
