@@ -1,0 +1,19 @@
+version: "2.0"
+services:
+  qbittorrent:
+    image: ghcr.io/linuxserver/qbittorrent
+    container_name: qbittorrent
+    environment:
+      - PUID=998
+      - PGID=100
+      - TZ=Europe/Bucharest
+      - WEBUI_PORT=8080
+    volumes:
+      - /srv/dev-disk-by-id-usb-Kingston_DT_HyperX_3.0_20CF30E117F6BEC0520331D5-0-0-part1/appdata/qBittorrent:/config
+      - /srv/dev-disk-by-id-usb-Kingston_DT_HyperX_3.0_20CF30E117F6BEC0520331D5-0-0-part1/cloud:/downloads
+      - /srv/dev-disk-by-id-usb-ADATA_XPG_EX500_49C24583109C-0-0-part1/cloud_500gb:/downloads2
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 8080:8080
+    restart: unless-stopped
