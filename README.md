@@ -14,3 +14,8 @@
 ## qBittorrent
 * Web Client 
 * https://hub.docker.com/r/linuxserver/qbittorrent
+
+## HomeBridge
+* HomeKit support for the impatient.
+* https://homebridge.io/
+* https://github.com/oznu/docker-homebridge
