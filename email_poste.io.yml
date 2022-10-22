@@ -1,0 +1,21 @@
+# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+version: '3.8'
+services:
+  instagrid-posteio-email:
+    image: analogic/poste.io
+    volumes:
+       - D:\instagrid\_volume_docker_poste_io_data:/data
+    environment:
+      - TZ=Europe/Bucharest
+      - HTTPS=OFF
+    # If you want to expose these ports outside your dev PC,
+    # remove the "127.0.0.1:" prefix
+    ports:
+      - 127.0.0.1:800:80
+      - 127.0.0.1:803:443
+      - 127.0.0.1:587:587
+      - 127.0.0.1:110:110
+      - 127.0.0.1:143:143
+      - 127.0.0.1:465:465
+      - 127.0.0.1:993:993
+      - 127.0.0.1:995:995
