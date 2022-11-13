@@ -1,0 +1,17 @@
+---
+version: "3.8"
+# https://github.com/louislam/uptime-kuma
+# https://uptime.kuma.pet/
+services:
+  uptime-kuma:
+    # 1 is the last version    
+    image: louislam/uptime-kuma:1
+    
+    container_name: uptime-kuma
+    volumes:
+      - /appdata/uptime-kuma/data:/app/data
+    ports:
+      - 3011:3001
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
