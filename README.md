@@ -24,6 +24,7 @@
 * Poste.io ~ complete mail server
 * https://poste.io/
 * https://hub.docker.com/r/analogic/poste.io/
+* **Does not work on RPI/ARM**
 
 ## Uptime Kuma
 * A self-hosted monitoring tool similar to "Uptime Robot"
