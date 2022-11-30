@@ -31,3 +31,8 @@
 * https://uptime.kuma.pet/
 * https://github.com/louislam/uptime-kuma
 * https://hub.docker.com/r/louislam/uptime-kuma
+
+## Homarr
+* A modern and lightweight homepage for your server
+* https://homarr.dev/
+* https://github.com/ajnart/homarr/
