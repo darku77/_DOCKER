@@ -1,0 +1,16 @@
+version: '3'
+#---------------------------------------------------------------------#
+#                Homarr -  A homepage for your server.                #
+#---------------------------------------------------------------------#
+# Getting EACCESS errors in the logs? Try running sudo chmod 777 /directory-you-mounted-to!
+services:
+  homarr:
+    container_name: homarr
+    image: ghcr.io/ajnart/homarr:latest
+    restart: unless-stopped
+    volumes:
+      - /appdata/homarr/configs:/app/data/configs
+      - /appdata/homarr/icons:/app/public/icons
+      - /var/run/docker.sock:/var/run/docker.sock # enable access to docker
+    ports:
+      - '7575:7575'
