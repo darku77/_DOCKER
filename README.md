@@ -36,3 +36,7 @@
 * A modern and lightweight homepage for your server
 * https://homarr.dev/
 * https://github.com/ajnart/homarr/
+
+## Yacht
+* A container management UI with a focus on templates and 1-click deployments.
+* https://yacht.sh/
