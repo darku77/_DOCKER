@@ -40,3 +40,8 @@
 ## Yacht
 * A container management UI with a focus on templates and 1-click deployments.
 * https://yacht.sh/
+
+## Dash
+* a modern server dashboard
+* https://getdashdot.com/
+* https://github.com/MauriceNino/dashdot
