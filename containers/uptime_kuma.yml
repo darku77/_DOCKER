@@ -1,13 +1,11 @@
----
 version: "3.8"
 # https://github.com/louislam/uptime-kuma
 # https://uptime.kuma.pet/
 services:
   uptime-kuma:
     # 1 is the last version    
-    image: louislam/uptime-kuma:1
-    
     container_name: uptime-kuma
+    image: louislam/uptime-kuma:1
     volumes:
       - /appdata/uptime-kuma/data:/app/data
     ports:
