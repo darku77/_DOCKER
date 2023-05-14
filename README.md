@@ -45,3 +45,22 @@
 * a modern server dashboard
 * https://getdashdot.com/
 * https://github.com/MauriceNino/dashdot
+
+## Troubleshooting
+
+### Connect to Docker remote from IntelliJ IDEA (e.g RPI)
+ * Setup a SSH Configuration: https://www.jetbrains.com/help/idea/create-ssh-configurations.html
+ * On the remote where docker is running:
+   * Run to edit the file: `sudo nano /etc/default/docker`
+   * Using the `-H` flag in the `DOCKER_OPTS` variable in the `/etc/default/docker` file.
+    ````
+    DOCKER_OPTS="-H tcp://0.0.0.0:80
+    ````
+   * Run `sudo usermod -aG docker $USER`
+ * Explanations:
+   * `usermod`: This is the command for modifying user accounts.
+   * `-a`: This flag tells `usermod` to add the specified group to the user's existing groups (instead of replacing them).
+   * `-G docker`: This specifies the name of the group to add the user to, which is "docker" in this case.
+   * `$USER`: This is a shell variable that expands to the username of the currently logged-in user. The command is replacing `$USER` with the actual username of the user account you want to modify.
+   * To list all available groups: `sudo getent group`
+   * To list groups associated to the current user: `groups $USER`
