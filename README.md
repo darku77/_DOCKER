@@ -54,7 +54,7 @@
    * Run to edit the file: `sudo nano /etc/default/docker`
    * Using the `-H` flag in the `DOCKER_OPTS` variable in the `/etc/default/docker` file.
     ````
-    DOCKER_OPTS="-H tcp://0.0.0.0:80
+    DOCKER_OPTS="-H tcp://0.0.0.0:80"
     ````
    * Run `sudo usermod -aG docker $USER`
  * Explanations:
