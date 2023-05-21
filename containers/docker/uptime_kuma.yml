@@ -3,13 +3,18 @@ version: "3.8"
 # https://uptime.kuma.pet/
 services:
   uptime-kuma:
-    # 1 is the last version    
+    # 1 is the last version
     container_name: uptime-kuma
     image: louislam/uptime-kuma:1
     volumes:
       - /appdata/uptime-kuma/data:/app/data
     ports:
-      - 3011:3001
+      - "3001:3001"
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
+
+networks:
+  default:
+    external: true
+    name: nginx_network

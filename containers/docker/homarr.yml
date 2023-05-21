@@ -14,3 +14,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock # enable access to docker
     ports:
       - '7575:7575'
+
+networks:
+  default:
+    external: true
+    name: nginx_network

@@ -1,4 +1,4 @@
-# _DOCKER
+# DOCKER
 
 ## Ouroboros
 * Keep docker images updated

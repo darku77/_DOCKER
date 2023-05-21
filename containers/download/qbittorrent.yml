@@ -12,7 +12,12 @@ services:
       - /appdata/qBittorrent:/config
       - /srv/dev-disk-by-uuid-1818fef1-b311-4d1d-8378-3745d8e7a331/cloud_500gb:/downloads
     ports:
-      - 6881:6881
-      - 6881:6881/udp
-      - 8080:8080
+      - "6881:6881"
+      - "6881:6881/udp"
+      - "8080:8080"
     restart: unless-stopped
+
+networks:
+  default:
+    external: true
+    name: nginx_network

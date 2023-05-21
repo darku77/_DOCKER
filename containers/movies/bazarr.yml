@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  bazarr:
+    container_name: bazarr
+    image: lscr.io/linuxserver/bazarr:latest
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /appdata/bazarr/config:/config
+      - /srv/dev-disk-by-uuid-1818fef1-b311-4d1d-8378-3745d8e7a331/cloud_500gb:/movies
+      # - /path/to/tv:/tv #optional
+    ports:
+      - "6767:6767"
+    restart: unless-stopped
+
+networks:
+  default:
+    external: true
+    name: nginx_network

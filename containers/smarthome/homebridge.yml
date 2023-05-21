@@ -7,5 +7,12 @@ services:
     network_mode: host
     environment:
       - HOMEBRIDGE_CONFIG_UI_PORT=8581
+    ports:
+      - "8581:8581"
     volumes:
-      - ./homebridge:/homebridge
+      - /appdata/homebridge:/homebridge
+
+networks:
+  default:
+    external: true
+    name: nginx_network

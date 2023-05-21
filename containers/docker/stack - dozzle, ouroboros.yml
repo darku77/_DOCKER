@@ -9,7 +9,7 @@ services:
       - TZ=Europe/Bucharest
     restart: unless-stopped
     ports:
-      - 9999:8080
+      - "9999:8080"
   ouroboros:
     container_name: ouroboros
     hostname: ouroboros
@@ -23,3 +23,8 @@ services:
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  default:
+    external: true
+    name: nginx_network
