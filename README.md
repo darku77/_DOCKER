@@ -1,50 +1,71 @@
 # DOCKER
 
-## Ouroboros
+## HomeLab Management
+
+
+### Ouroboros
 * Keep docker images updated
 * https://github.com/pyouroboros/ouroboros
 * https://hub.docker.com/r/pyouroboros/ouroboros
 
-## Dozzle
+### Dozzle
 * Log viewer for docker containers
 * https://dozzle.dev/
 * https://github.com/amir20/dozzle
 * https://hub.docker.com/r/amir20/dozzle/
 
-## qBittorrent
-* Web Client 
-* https://hub.docker.com/r/linuxserver/qbittorrent
+### Yacht
+* A container management UI with a focus on templates and 1-click deployments.
+* https://yacht.sh/
 
-## HomeBridge
-* HomeKit support for the impatient.
-* https://homebridge.io/
-* https://github.com/oznu/docker-homebridge
+### Dash
+* a modern server dashboard
+* https://getdashdot.com/
+* https://github.com/MauriceNino/dashdot
 
-## Poste.io
-* Poste.io ~ complete mail server
-* https://poste.io/
-* https://hub.docker.com/r/analogic/poste.io/
-* **Does not work on RPI/ARM**
-
-## Uptime Kuma
+### Uptime Kuma
 * A self-hosted monitoring tool similar to "Uptime Robot"
 * https://uptime.kuma.pet/
 * https://github.com/louislam/uptime-kuma
 * https://hub.docker.com/r/louislam/uptime-kuma
 
-## Homarr
+### Nginx Proxy Manager
+* Expose your services easily and securely
+* https://nginxproxymanager.com/
+* https://github.com/NginxProxyManager/nginx-proxy-manager
+
+### Homarr
 * A modern and lightweight homepage for your server
 * https://homarr.dev/
 * https://github.com/ajnart/homarr/
 
-## Yacht
-* A container management UI with a focus on templates and 1-click deployments.
-* https://yacht.sh/
+## Download
 
-## Dash
-* a modern server dashboard
-* https://getdashdot.com/
-* https://github.com/MauriceNino/dashdot
+### qBittorrent
+* Web Client 
+* https://hub.docker.com/r/linuxserver/qbittorrent
+
+## Smart Home
+
+### HomeBridge
+* HomeKit support for the impatient.
+* https://homebridge.io/
+* https://github.com/oznu/docker-homebridge
+
+## Mail
+
+### Poste.io
+* Poste.io ~ complete mail server
+* https://poste.io/
+* https://hub.docker.com/r/analogic/poste.io/
+* **Does not work on RPI/ARM**
+
+## Movies
+
+### Bazarr
+* Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
+* https://www.bazarr.media/
+* https://github.com/morpheus65535/bazarr
 
 ## Troubleshooting
 
