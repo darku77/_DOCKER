@@ -11,11 +11,16 @@ services:
     volumes:
       - /appdata/qBittorrent:/config
       - /srv/dev-disk-by-uuid-1818fef1-b311-4d1d-8378-3745d8e7a331/cloud_500gb:/downloads
+      - /srv/dev-disk-by-uuid-1818fef1-b311-4d1d-8378-3745d8e7a331/tv_shows/:/series
     ports:
       - "6881:6881"
       - "6881:6881/udp"
       - "8080:8080"
     restart: unless-stopped
+    # assign a static IP, to add reverse proxy for QB with nginx, needs IP routing
+    networks:
+      default:
+        ipv4_address: 172.22.0.7
 
 networks:
   default:
