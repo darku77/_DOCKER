@@ -3,16 +3,17 @@ services:
   dozzle:
     container_name: dozzle
     image: amir20/dozzle:latest
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - TZ=Europe/Bucharest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
     ports:
       - "9999:8080"
+    networks:
+      - default
   ouroboros:
     container_name: ouroboros
-    hostname: ouroboros
     image: pyouroboros/ouroboros
     environment:
       - CLEANUP=true
@@ -23,7 +24,8 @@ services:
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-
+    networks:
+      - default
 networks:
   default:
     external: true
