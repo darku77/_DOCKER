@@ -39,6 +39,25 @@
 * https://homarr.dev/
 * https://github.com/ajnart/homarr/
 
+## Speed Test Server
+
+* Used speed test cli to test speed, stores data in influxdb timeseries, displays it Grafana
+
+### Grafana
+* Your application observability
+* https://grafana.com/
+* https://hub.docker.com/r/grafana/grafana
+
+### InfluxDB
+* InfluxDB. - It's About Time.
+* https://www.influxdata.com/
+* https://hub.docker.com/_/influxdb
+
+### Speedtest
+* Internet connection measurement for developers
+* https://www.speedtest.net/apps/cli
+* https://github.com/frdmn/docker-speedtest-grafana
+
 ## Download
 
 ### qBittorrent

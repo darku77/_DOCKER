@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+
+  #INFLUXDB
+  influxdb:
+    container_name: speedtest_influxdb
+    restart: always
+    image: influxdb:1.8
+    # ports:
+    #   - "8086:8086"
+    volumes:
+      - "/appdata/speedtest_influxdb/influxdb/:/var/lib/influxdb"
+    environment:
+      - "INFLUXDB_ADMIN_USER=admin"
+      - "INFLUXDB_ADMIN_PASSWORD=password"
+      - "INFLUXDB_DB=speedtest"
+
+  #GRAFANA
+  grafana:
+    container_name: speedtest_grafana
+    restart: always
+    image: grafana/grafana:6.7.2
+    # here copy the dashboards folder in /appdata/speedtest_grafana
+    volumes:
+      - "/appdata/speedtest_grafana/provisioning:/etc/grafana/provisioning"
+    # ports:
+    #   - "3000:3000"
+    environment:
+      - "GF_SERVER_ROOT_URL=http://localhost"
+      - "GF_SECURITY_ADMIN_PASSWORD=admin"
+      - "GF_AUTH_ANONYMOUS_ENABLED=true"
+    depends_on:
+      - influxdb
+
+  # SPEED TEST
+  speedtest:
+    restart: always
+    image: frdmn/speedtest-grafana:latest
+    container_name: speedtest
+    environment:
+      - "SPEEDTEST_INTERVAL=3600"
+      - "SPEEDTEST_HOST=local"
+    depends_on:
+      - influxdb
+
+
+networks:
+  default:
+    external: true
+    name: nginx_network
