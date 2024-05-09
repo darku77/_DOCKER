@@ -81,10 +81,17 @@
 
 ## Movies
 
+### Radarr
+* Radarr is a movie collection manager for Usenet and BitTorrent users.
+* https://radarr.video/
+* https://hub.docker.com/r/linuxserver/radarr
+
+
 ### Bazarr
 * Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
 * https://www.bazarr.media/
 * https://github.com/morpheus65535/bazarr
+* https://hub.docker.com/r/linuxserver/bazarr
 
 ## Troubleshooting
 

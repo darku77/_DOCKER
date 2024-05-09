@@ -9,8 +9,8 @@ services:
       - TZ=Europe/Bucharest
     volumes:
       - /appdata/bazarr/config:/config
+      # sudo chmod -R 0777 .   -> to add rights to the folder
       - /srv/dev-disk-by-uuid-1818fef1-b311-4d1d-8378-3745d8e7a331/cloud_500gb:/movies
-      # - /path/to/tv:/tv #optional
     ports:
       - "6767:6767"
     restart: unless-stopped
