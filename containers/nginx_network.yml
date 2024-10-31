@@ -1,0 +1,16 @@
+# creates a shared network, ads a dummy service
+services:
+  busybox:
+    image: busybox  # A lightweight image that just prints a message
+    command: sleep 3600  # Keeps the container running for testing purposes
+    networks:
+      - nginx_network
+
+networks:
+  nginx_network: 
+    driver: bridge
+    name: nginx_network
+    ipam:
+     config:
+       - subnet: 172.22.0.0/16
+         gateway: 172.22.0.1
