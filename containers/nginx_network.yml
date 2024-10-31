@@ -2,6 +2,7 @@
 services:
   busybox:
     image: busybox  # A lightweight image that just prints a message
+    container_name: busybox
     command: sleep 3600  # Keeps the container running for testing purposes
     networks:
       - nginx_network
